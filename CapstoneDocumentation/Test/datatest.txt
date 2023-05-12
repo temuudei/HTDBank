@@ -1,0 +1,71 @@
+-BankJdbcTemplateRepository
+    @Autowired
+    BankJdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-ControllerJdbcTemplateRepository
+    @Autowired
+    ControllerJdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-AccountJdbcTemplateRepository
+    @Autowired
+    AccountdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-CustomerJdbcTemplateRepository
+    @Autowired
+    CustomerJdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-EmployeeJdbcTemplateRepository
+    @Autowired
+    EmpoloyeeJdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-CardJdbcTemplateRepistory
+    @Autowired
+    CardJdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-TransactionJdbcRepistory
+    @Autowired
+    TransactionJdbcTemplateRepository repository
+    @Autowired
+    KnownGoodSate KnownGoodSate
+    @BeforeEach()
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+-KnownGoodSate

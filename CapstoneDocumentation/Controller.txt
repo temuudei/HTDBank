@@ -1,0 +1,115 @@
+-BankController
+    @GetMapping
+    findAll(): List<Bank>
+
+    @GetMapping("/{bank_id}")
+    findById(@PathVariable int id): ResponseEntity<Bank>
+
+    @PostMapping
+    add(@RequestBody @Valid Bank bank, BindingResult): ResponseEntity<Object>
+
+    @PutMapping("/{bank_id}")
+    update(@RequestBody @Valid Bank bank, BindingResult): ResposneEntity<Object>
+
+    @DeleteMapping("/{bank_id}")
+    delete(@PathVariable int id): ResponseEntity<Void>
+
+-AccountController
+    @GetMapping
+    findAll(): List<Account>
+
+    @GetMapping("/{account_id}")
+    findById(@PathVariable int id): ResponseEntity<Bank>
+
+    @PostMapping
+    add(@RequestBody @Valid Account acc, BindingResult): ResponseEntity<Object>
+
+    @PutMapping("/{account_id}")
+    update(@RequestBody @Valid Account acc, BindingResult): ResposneEntity<Object>
+
+    @DeleteMapping("/{account_id}")
+    delete(@PathVariable int id): ResponseEntity<Void>
+
+-CustomerController
+    @GetMapping
+    findAll(): List<Account>
+
+    @GetMapping("/{customer_id}")
+    findById(@PathVariable int id): ResponseEntity<Bank>
+
+    @PostMapping
+    add(@RequestBody @Valid Customer customer, BindingResult): ResponseEntity<Object>
+
+    @PutMapping("/{customer_id}")
+    update(@RequestBody @Valid Customer customer, BindingResult): ResposneEntity<Object>
+
+    @DeleteMapping("/{customer_id}")
+    delete(@PathVariable int id): ResponseEntity<Void>
+
+-EmployeeController
+    @GetMapping
+    findAll(): List<Account>
+
+    @GetMapping("/{employee_id}")
+    findById(@PathVariable int id): ResponseEntity<Bank>
+
+    @PostMapping
+    add(@RequestBody @Valid Employee employee, BindingResult): ResponseEntity<Object>
+
+    @PutMapping("/{employee_id}")
+    update(@RequestBody @Valid Employee employee, BindingResult): ResposneEntity<Object>
+
+    @DeleteMapping("/{employee_id}")
+    delete(@PathVariable int id): ResponseEntity<Void>
+
+-CardController
+    @GetMapping
+    findAll(): List<Account>
+
+    @GetMapping("/{card_id}")
+    findById(@PathVariable int id): ResponseEntity<Bank>
+
+    @PostMapping
+    add(@RequestBody @Valid Card card, BindingResult): ResponseEntity<Object>
+
+    @PutMapping("/{card_id}")
+    update(@RequestBody @Valid Card card, BindingResult): ResposneEntity<Object>
+
+    @DeleteMapping("/{card_id}")
+    delete(@PathVariable int id): ResponseEntity<Void>
+
+-TransactionController
+    @GetMapping
+    findAll(): List<Account>
+
+    @GetMapping("/{transaction_id}")
+    findById(@PathVariable int id): ResponseEntity<Bank>
+
+    @PostMapping
+    add(@RequestBody @Valid Transaction Transaction, BindingResult): ResponseEntity<Object>
+
+    @PutMapping("/{transacton_id}")
+    update(@RequestBody @Valid Transaction Transaction, BindingResult): ResposneEntity<Object>
+
+    @DeleteMapping("/{transaction_id}")
+    delete(@PathVariable int id): ResponseEntity<Void>
+
+@ControllerAdvice
+-GlobalExceptionHandler
+    @ExceptionHnadler(DataAccessException.class)
+    handleException(DataAccessException ex): ResponseEntity<ErrorResponse>
+
+    @ExceptionHnadler(EmptyResultDataAccess.class)
+    handleException(EmptyResultDataAccessException ex): ResponseEntity<ErrorResponse>
+
+    @ExceptionHnadler(Exception.class)
+    handleException(Exception ex): ResponseEntity<ErrorResponse>
+
+-ErrorResponse
+    private final LocalDateTime timeStamp
+    private final String message
+    getTimeStamp(): LocalDateTime timeStamp
+    ErrorResponse(String message)
+    getMessage(): String message
+
+-AuthController

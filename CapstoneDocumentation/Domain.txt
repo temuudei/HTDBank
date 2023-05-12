@@ -1,0 +1,48 @@
+Service classes
+-BankService
+        findAll(): List<Bank>
+        findById(int id): Bank
+        add(Bank bank): Result<Bank>
+        update(Bank bank): Result<Bank>
+        delete(int id): boolean
+-AccountService
+        findAll(): List<Account>
+        findById(int id): Account
+        add(Account acc): Result<Account>
+        update(Account acc): Result<Account>
+        delete(int id): boolean
+-CustomerService
+        findAll(): List<Customer>
+        findById(int id): Customer
+        add(Customer customer): Result<Customer>
+        update(Customer customer): Result<Customer>
+        delete(int id): boolean
+-EmployeeService
+        findAll(): List<Employee>
+        findById(int id): Employee
+        add(BEmployee employee): Result<Employee>
+        update(Employee employee): Result<Employee>
+        delete(int id): boolean
+-CardService
+        findAll(): List<Card>
+        findById(int id): Card
+        add(Bank bank): Result<Card>
+        update(Bank bank): Resukt<Card>
+        delete(int id): boolean
+-TransactionService
+        findAll(): List<Transaction>
+        findById(int id): Transaction
+        add(Transaction trans): Result<Transaction>
+        update(Transaction trans): Result<Transaction>
+        delete(int id): boolean
+
+Result<T>
+    private T payload
+    List<String> messages
+    ResultType: Type
+    addMessage(message, type): List<String>
+    isSuccess(): boolean
+    getType(): ResultType
+    getPayload: T 
+    setPayload(T payload)
+    

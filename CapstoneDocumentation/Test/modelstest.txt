@@ -1,0 +1,31 @@
+-BankTest
+    testBankId()
+    testRouting_number()
+-Customer
+    testCusomerId()
+    testFirstName()
+    testLastName()
+    testAccountId()
+    testSSN()
+-Employee
+    testEmployeeId()
+    testFirstName()
+    testLastName()
+    testSalary()
+    testBankId()
+-Account
+    testAccountId()
+    testCustomerId()
+    testBankId()
+    testAccountBalance()
+    testTransaction()
+-Card
+    testCardId()
+    testAccountId()
+    testCustomerId()
+    testType()
+-Transaction
+    testTransactionId()
+    testAction()
+    testAmount()
+-TestAppUser //securit

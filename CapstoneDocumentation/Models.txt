@@ -1,0 +1,34 @@
+Models
+    -Bank
+        bank_id
+        routing_number
+    -Customer
+        custoemr_id
+        first_name
+        last_name
+        account_id
+        ssn
+    -Employee
+        employee_id
+        first_name
+        last_name
+        salary
+        bank_id
+    -Account
+        account_id
+        customer_id
+        bank_id
+        account_balance
+        transaction
+    -Card
+        card_id
+        account_id
+        customer_id
+        type
+    -Transaction
+        transaction_id
+        action
+        amount
+    -Appuser
+        
+    

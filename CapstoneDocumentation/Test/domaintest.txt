@@ -1,0 +1,67 @@
+-BankServiceTest
+    @Autowired
+    BankService service
+    @MockBean
+    BankRepository repository
+
+    testShouldAll()
+    testShouldUpdate()
+    testShouldDeleteById()
+    testShouldAdd()
+    testShouldFindById()
+-AccountServiceTest
+    @Autowired
+    AccountService service
+    @MockBean
+    BankRepository repository
+
+    testShouldAll()
+    testShouldUpdate()
+    testShouldDeleteById()
+    testShouldAdd()
+    testShouldFindById()
+
+-CustomerServiceTest
+    @Autowired
+    CustomerService service
+    @MockBean
+    BankRepository repository
+
+    testShouldAll()
+    testShouldUpdate()
+    testShouldDeleteById()
+    testShouldAdd()
+    testShouldFindById()
+--EmployeeServiceTest
+    @Autowired
+    BankService service
+    @MockBean
+    BankRepository repository
+
+    testShouldAll()
+    testShouldUpdate()
+    testShouldDeleteById()
+    testShouldAdd()
+    testShouldFindById()
+-CardServiceTest
+    @Autowired
+    CardService service
+    @MockBean
+    BankRepository repository
+
+    testShouldAll()
+    testShouldUpdate()
+    testShouldDeleteById()
+    testShouldAdd()
+    testShouldFindById()
+-TransactionServiceTest
+    @Autowired
+    TransactionService service
+    @MockBean
+    BankRepository repository
+
+    testShouldAll()
+    testShouldUpdate()
+    testShouldDeleteById()
+    testShouldAdd()
+    testShouldFindById()

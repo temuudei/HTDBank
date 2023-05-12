@@ -1,0 +1,73 @@
+-BankControllerTest
+    @MockBean
+    BankRepository BankRepository
+    @Autowired
+    MockMvc mvc
+
+    @Test
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+
+-AccountControllerTest
+    @MockBean
+    AccountRepository BankRepository
+    @Autowired
+    MockMvc mvc
+
+    @Test
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+
+-CustomerControllerTest
+    @MockBean
+    CustomerRepository BankRepository
+    @Autowired
+    MockMvc mvc
+
+    @Test
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+
+--EmployeeControllerTest
+    @MockBean
+    EmployeeRepository BankRepository
+    @Autowired
+    MockMvc mvc
+
+    @Test
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+
+-CardControllerTest
+    @MockBean
+    CardRepository BankRepository
+    @Autowired
+    MockMvc mvc
+
+    @Test
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+
+-TransactionControllerTest
+    @MockBean
+    TransactionRepository BankRepository
+    @Autowired
+    MockMvc mvc
+
+    @Test
+    shouldFindAll()
+    shouldFindById()
+    shouldUpdate()
+    shouldDeleteById()
+
+-AuthControllerTest

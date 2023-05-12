@@ -1,0 +1,93 @@
+Data
+    -BankRepository
+        findAll(): List<Bank>
+        findById(int id): Bank
+        add(Bank bank): Bank
+        update(Bank bank): boolean
+        delete(int id): boolean
+     -BankJdbcTemplateRepository implemenents BankRepository
+        findAll(): List<Bank>
+        findById(int id): Bank
+        add(Bank bank): Bank
+        update(Bank bank): boolean
+        delete(int id): boolean
+    -AccountRepository
+        findAll(): List<Account>
+        findById(int id): Account
+        add(Account acc): Account
+        update(Account acc): boolean
+        delete(int id): boolean
+    -AccountJdbcTemplateRepository implements AccountRepository
+        findAll(): List<Account>
+        findById(int id): Account
+        add(Account acc): Account
+        update(Account acc): boolean
+        delete(int id): boolean
+    -CustomerRepository
+        findAll(): List<Customer>
+        findById(int id): Customer
+        add(Customer customer): Customer
+        update(Customer customer): boolean
+        delete(int id): boolean
+    -CustomerJdbcTemplateRepository implemenents CustomerRepository
+        findAll(): List<Customer>
+        findById(int id): Customer
+        add(Customer customer): Customer
+        update(Customer customer): boolean
+        delete(int id): boolean
+    -EmployeeRepository
+        findAll(): List<Employee>
+        findById(int id): Employee
+        add(BEmployee employee): Employee
+        update(Employee employee): boolean
+        delete(int id): boolean
+    -EmployeeJdbcTemplateRepository implements EmployeeRepository
+        findAll(): List<Employee>
+        findById(int id): BEmployee
+        add(BEmployee employee): Employee
+        update(Employee employee): boolean
+        delete(int id): boolean
+    -CardRepository
+        findAll(): List<Card>
+        findById(int id): Card
+        add(Bank bank): Card
+        update(Bank bank): boolean
+        delete(int id): boolean
+    -CardJdbcTemplateRepository implements CardRepository
+        findAll(): List<Card>
+        findById(int id): Card
+        add(Bank bank): Card
+        update(Bank bank): boolean
+        delete(int id): boolean
+    -TransactionRepository
+        @Transactional
+        findAll(): List<Transaction>
+
+        @Transactional
+        findById(int id): Transaction
+
+        @Transactional
+        add(Transaction trans): Transaction
+
+        @Transactional
+        update(Transaction trans): boolean
+
+        @Transactional
+        delete(int id): boolean
+    -TransactionJdbcTemplateRepository implements TransactionRepository
+        findAll(): List<Transaction>
+        findById(int id): Transaction
+        add(Transaction trans): Transaction
+        update(Transaction trans): boolean
+        delete(int id): boolean
+
+    -AppUserRepository
+        findByUsername(): Appuser 
+        add(Appuser user): Appuser
+        update(Appuser user): Void
+    -AppuserJdbcTemplateRepository
+        findByUsername(): Appuser 
+        add(Appuser user): Appuser
+        update(Appuser user): Void
+        private updateRolls(Appuser user): Void
+        private getRollsByUsername(String username): List<String> 

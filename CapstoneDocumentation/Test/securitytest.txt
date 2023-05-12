@@ -1,0 +1,7 @@
+-AuthoControllerTest
+
+-AppUserJdbcTemplateRepositoryTest
+
+-AppUserTest
+
+-AppUserServiceTest
