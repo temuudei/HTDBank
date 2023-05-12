@@ -2,8 +2,7 @@ package learn.htdbank.models;
 import javax.validation.constraints.*;
 public class Bank {
     private int bank_id;
-    @NotNull(message = "Routing number is required.")
-    @Min(value = 1, message = "Routing number has to be greater than 0.")
+    @Min(value = 1, message = "Routing number has to be at least 1.")
     private int routing_number;
 
     public Bank() {
