@@ -2,29 +2,28 @@ package learn.htdbank.models;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
 
-public class Customer {
-    private int customer_id;
+public class Employee {
+    private int employee_id;
     @NotBlank(message = "First name is required.")
     @Size(max = 50, message = "First name cannot be greater than 50 characters.")
     private String first_name;
     @NotBlank(message = "Last name is required.")
     @Size(max = 50, message = "Last name cannot be greater than 50 characters.")
     private String last_name;
-    @Min(value = 1, message = "Social security number has to be at least 1.")
-    private int ssn;
-    private int account_id;
-    private List<Card> cards = new ArrayList<>();
-
-    public int getCustomer_id() {
-        return customer_id;
+    @NotNull(message = "Salary amount is required")
+    @Min(value = 1, message = "Salary amount has to be at least 1.")
+    private BigDecimal salary;
+    private int bank_id;
+    public int getEmployee_id() {
+        return employee_id;
     }
 
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
+    public void setEmployee_id(int employee_id) {
+        this.employee_id = employee_id;
     }
 
     public String getFirst_name() {
@@ -43,27 +42,19 @@ public class Customer {
         this.last_name = last_name;
     }
 
-    public int getSsn() {
-        return ssn;
+    public BigDecimal getSalary() {
+        return salary;
     }
 
-    public void setSsn(int ssn) {
-        this.ssn = ssn;
+    public void setSalary(BigDecimal salary) {
+        this.salary = salary;
     }
 
-    public int getAccount_id() {
-        return account_id;
+    public int getBank_id() {
+        return bank_id;
     }
 
-    public void setAccount_id(int account_id) {
-        this.account_id = account_id;
-    }
-
-    public List<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
+    public void setBank_id(int bank_id) {
+        this.bank_id = bank_id;
     }
 }
