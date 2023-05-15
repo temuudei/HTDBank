@@ -22,13 +22,12 @@ public class CustomerTemplateRepository implements CustomerRepository {
 
     @Override
     public List<Customer> findAll() {
-       final String sql = "SELECT customer_id, first_name, last_name, account_id, ssn FROM Customer;";
+       final String sql = "SELECT customer_id, first_name, last_name, ssn FROM Customer;";
         return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
             Customer customer = new Customer();
             customer.setCustomer_id(resultSet.getInt("customer_id"));
             customer.setFirst_name(resultSet.getString("first_name"));
             customer.setLast_name(resultSet.getString("last_name"));
-            customer.setAccount_id(resultSet.getInt("account_id"));
             customer.setSsn(resultSet.getInt("ssn"));
             return customer;
         });
@@ -37,13 +36,12 @@ public class CustomerTemplateRepository implements CustomerRepository {
     @Override
     @Transactional
     public Customer findById(int id) {
-       final String sql = "SELECT customer_id, first_name, last_name, account_id, ssn FROM Customer WHERE customer_id = ?;";
+       final String sql = "SELECT customer_id, first_name, last_name, ssn FROM Customer WHERE customer_id = ?;";
         return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
             Customer customer = new Customer();
             customer.setCustomer_id(resultSet.getInt("customer_id"));
             customer.setFirst_name(resultSet.getString("first_name"));
             customer.setLast_name(resultSet.getString("last_name"));
-            customer.setAccount_id(resultSet.getInt("account_id"));
             customer.setSsn(resultSet.getInt("ssn"));
             return customer;
         }, id).stream().findFirst().orElse(null);
@@ -52,15 +50,14 @@ public class CustomerTemplateRepository implements CustomerRepository {
     @Override
     public Customer add(Customer customer) {
         KeyHolder key = new GeneratedKeyHolder();
-        final String sql = "INSERT INTO Customer (customer_id, first_name, last_name, account_id, ssn) " +
-                "VALUES (?, ?, ?, ?, ?);";
+        final String sql = "INSERT INTO Customer (customer_id, first_name, last_name, ssn) " +
+                "VALUES (?, ?, ?, ?);";
         int rowsInserted = jdbcTemplate.update((connect) -> {
             PreparedStatement ps = connect.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, customer.getCustomer_id());
             ps.setString(2, customer.getFirst_name());
             ps.setString(3, customer.getLast_name());
-            ps.setInt(4, customer.getAccount_id());
-            ps.setInt(5, customer.getSsn());
+            ps.setInt(4, customer.getSsn());
             return ps;
         }, key );
 
@@ -75,12 +72,16 @@ public class CustomerTemplateRepository implements CustomerRepository {
     @Override
     @Transactional
     public boolean update(Customer customer) {
-        final String sql = "UPDATE Customer "
+        final String sql = "UPDATE Customer SET first_name=?, last_name=?, ssn=? WHERE customer_id = ?;";
+        int rowsUpdated = jdbcTemplate.update(sql, customer.getFirst_name(), customer.getLast_name(), customer.getSsn(), customer.getCustomer_id());
+        return rowsUpdated > 0;
     }
 
     @Override
     @Transactional
     public boolean delete(int id) {
-        return false;
+        final String sql = "DELETE FROM Customer WHERE customer_id = ?;";
+        int rowsDeleted = jdbcTemplate.update(sql, id);
+        return rowsDeleted > 0;
     }
 }

@@ -20,3 +20,4 @@ public interface CustomerRepository {
 
     @Transactional
     boolean delete(int id);
+}
