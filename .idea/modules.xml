@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HTDBank.iml" filepath="$PROJECT_DIR$/.idea/HTDBank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/htdbank/htdbank.iml" filepath="$PROJECT_DIR$/htdbank/htdbank.iml" />
     </modules>
   </component>
 </project>
