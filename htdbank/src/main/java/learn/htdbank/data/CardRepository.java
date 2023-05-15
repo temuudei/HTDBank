@@ -11,9 +11,9 @@ public interface CardRepository {
     @Transactional
     Card findById(int card_id);
     @Transactional
-    Card add(Card account);
+    Card add(Card card);
     @Transactional
-    boolean update(Card account);
+    boolean update(Card card);
     @Transactional
     boolean deleteById(int card_id);
 }
