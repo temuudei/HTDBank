@@ -37,8 +37,7 @@ public class EmployeeTemplateRepository implements EmployeeRepository {
     @Override
     public Employee add(Employee employee) {
         KeyHolder key = new GeneratedKeyHolder();
-        final String sql = "INSERT INTO Employee (first_name, last_name, salary, bank_id " +
-                "VALUES (?, ?, ?, ?);";
+        final String sql = "INSERT INTO Employee (first_name, last_name, salary, bank_id) VALUES (?, ?, ?, ?);";
 
         int rowsInserted = jdbcTemplate.update((connect) -> {
             PreparedStatement ps = connect.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
