@@ -71,10 +71,10 @@ begin
 
     delete from `Account`;
     alter table `Account` auto_increment = 1;
-    delete from Card;
-    alter table Card auto_increment = 1;
     delete from Employee;
     alter table Employee auto_increment = 1;
+    delete from Card;
+    alter table Card auto_increment = 1;
     delete from Customer;
     alter table Customer auto_increment = 1;
     delete from Bank;
@@ -99,8 +99,8 @@ begin
         (2, 'Debit', 2, 2);
 	
     insert into Employee(employee_id, first_name, last_name, salary, bank_id) values
-		(1, 'John', 'Whick', 89132.23, 1),
-        (2, 'Lebron', 'James', 32323288.56, 2);
+		(1, 'John', 'Whick', 348.23, 1),
+        (2, 'Lebron', 'James', 322.56, 2);
 	
     insert into `Transaction`(transaction_type, amount) values
 		('Deposit', '23231.56'),

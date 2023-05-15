@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,19 +27,26 @@ class AccountJdbcTemplateRepositoryTest {
         assertNotNull(accounts);
     }
 
-//    @Test
-//    void findById() {
-//    }
-//
-//    @Test
-//    void add() {
-//    }
-//
-//    @Test
-//    void update() {
-//    }
-//
-//    @Test
-//    void deleteById() {
-//    }
+    @Test
+    void shouldFindById() {
+        Account accountOne = new Account();
+        accountOne.setAccount_id(1);
+        accountOne.setBalance(BigDecimal.valueOf(454.34));
+        accountOne.setBank_id(1);
+        accountOne.setCustomer_id(1);
+
+        System.out.println(repository.findById(1));
+    }
+
+    @Test
+    void add() {
+    }
+
+    @Test
+    void update() {
+    }
+
+    @Test
+    void deleteById() {
+    }
 }
