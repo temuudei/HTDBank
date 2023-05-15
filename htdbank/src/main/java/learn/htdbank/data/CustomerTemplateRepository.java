@@ -76,6 +76,12 @@ public class CustomerTemplateRepository implements CustomerRepository {
     @Transactional
     public boolean delete(int id) {
         final String sql = "DELETE FROM Customer WHERE customer_id = ?;";
+
+        //delete from Card and Account first due to foreign keys
+        jdbcTemplate.update("DELETE FROM Card WHERE customer_id = ?;", id);
+        jdbcTemplate.update("DELETE FROM Account WHERE customer_id = ?;", id);
+
+        //delete from Customer
         int rowsDeleted = jdbcTemplate.update(sql, id);
         return rowsDeleted > 0;
     }
