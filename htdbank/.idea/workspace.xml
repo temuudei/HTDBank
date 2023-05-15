@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d5672c-afb2-4315-890e-a557c21e99db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/htdbank_test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/htdbank_test.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/learn/htdbank/data/AccountJdbcTemplateRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/htdbank/data/AccountJdbcTemplateRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/learn/htdbank/data/AccountJdbcTemplateRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/learn/htdbank/data/AccountJdbcTemplateRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/htdbank/data/AccountJdbcTemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/htdbank/data/AccountJdbcTemplateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/htdbank/data/CardJdbcTemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/htdbank/data/CardJdbcTemplateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/htdbank/data/mappers/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/htdbank/data/mappers/CardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/data/AccountJdbcTemplateRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/htdbank/data/AccountJdbcTemplateRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/data/mappers/CardMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/htdbank/data/mappers/CardMapper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +77,19 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AccountJdbcTemplateRepositoryTest">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.App" />
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountJdbcTemplateRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="htdbank" />
       <extension name="coverage">
@@ -125,6 +140,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AccountJdbcTemplateRepositoryTest" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.AccountJdbcTemplateRepositoryTest.shouldFindById" />
         <item itemvalue="JUnit.AccountJdbcTemplateRepositoryTest.shouldFindAll" />
       </list>
