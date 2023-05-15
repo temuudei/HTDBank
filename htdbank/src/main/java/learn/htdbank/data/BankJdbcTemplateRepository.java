@@ -77,6 +77,7 @@ public class BankJdbcTemplateRepository implements BankRepository{
     @Override
     @Transactional
     public boolean deleteById(int bank_id) {
+        jdbcTemplate.update("delete c from Card c inner join `Account` a on c.account_id = a.account_id where a.bank_id = ?;", bank_id);
         jdbcTemplate.update("delete from `Account` where bank_id = ?;", bank_id);
         jdbcTemplate.update("delete from Employee where bank_id = ?;", bank_id);
         return jdbcTemplate.update("delete from Bank where bank_id = ?;", bank_id) > 0;
