@@ -1,5 +1,6 @@
 package learn.htdbank.data;
 
+import learn.htdbank.data.mappers.EmployeeMapper;
 import learn.htdbank.models.Employee;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -23,30 +24,14 @@ public class EmployeeTemplateRepository implements EmployeeRepository {
     @Override
     public List<Employee> findAll() {
         final String sql = "SELECT employee_id, first_name, last_name, salary, bank_id FROM Employee;";
-        return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
-            Employee employee = new Employee();
-            employee.setEmployee_id(resultSet.getInt("employee_id"));
-            employee.setFirst_name(resultSet.getString("first_name"));
-            employee.setLast_name(resultSet.getString("last_name"));
-            employee.setSalary(resultSet.getBigDecimal("salary"));
-            employee.setBank_id(resultSet.getInt("bank_id"));
-            return employee;
-        });
+        return jdbcTemplate.query(sql, new EmployeeMapper());
     }
 
     @Override
     @Transactional
     public Employee findById(int id) {
         final String sql = "SELECT employee_id, first_name, last_name, salary, bank_id FROM Employee WHERE employee_id = ?";
-        return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
-            Employee employee = new Employee();
-            employee.setEmployee_id(resultSet.getInt("employee_id"));
-            employee.setFirst_name(resultSet.getString("first_name"));
-            employee.setLast_name(resultSet.getString("last_name"));
-            employee.setSalary(resultSet.getBigDecimal("salary"));
-            employee.setBank_id(resultSet.getInt("bank_id"));
-            return employee;
-        }, id).stream().findFirst().orElse(null);
+        return jdbcTemplate.query(sql, new EmployeeMapper(), id).stream().findFirst().orElse(null);
     }
 
     @Override

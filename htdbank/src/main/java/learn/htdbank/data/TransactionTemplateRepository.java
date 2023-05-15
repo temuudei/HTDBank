@@ -1,5 +1,6 @@
 package learn.htdbank.data;
 
+import learn.htdbank.data.mappers.TransactionMapper;
 import learn.htdbank.models.Transaction;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -23,26 +24,14 @@ public class TransactionTemplateRepository implements TransactionRepository {
     @Override
     public List<Transaction> findAll() {
         final String sql = "SELECT transaction_id, transaction_type, amount FROM Transaction;";
-        return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
-            Transaction trans = new Transaction();
-            trans.setTransaction_id(resultSet.getInt("transaction_id"));
-            trans.setTransaction_type(resultSet.getString("transaction_type"));
-            trans.setAmount(resultSet.getBigDecimal("amount"));
-            return trans;
-        });
+        return jdbcTemplate.query(sql, new TransactionMapper());
     }
 
     @Override
     @Transactional
     public Transaction findById(int id) {
         final String sql = "SELECT transaction_id, transaction_type, amount FROM Transaction WHERE transactin_id = ?;";
-        return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
-            Transaction trans = new Transaction();
-            trans.setTransaction_id(resultSet.getInt("transaction_id"));
-            trans.setTransaction_type(resultSet.getString("transaction_type"));
-            trans.setAmount(resultSet.getBigDecimal("amount"));
-            return trans;
-        }, id).stream().findFirst().orElse(null);
+        return jdbcTemplate.query(sql, new TransactionMapper(), id).stream().findFirst().orElse(null);
     }
 
     @Override

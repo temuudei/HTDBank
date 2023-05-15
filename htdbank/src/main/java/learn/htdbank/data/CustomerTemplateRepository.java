@@ -2,6 +2,7 @@ package learn.htdbank.data;
 
 import learn.htdbank.data.mappers.AccountMapper;
 import learn.htdbank.data.mappers.CardMapper;
+import learn.htdbank.data.mappers.CustomerMapper;
 import learn.htdbank.models.Card;
 import learn.htdbank.models.Customer;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -26,28 +27,14 @@ public class CustomerTemplateRepository implements CustomerRepository {
     @Override
     public List<Customer> findAll() {
        final String sql = "SELECT customer_id, first_name, last_name, ssn FROM Customer;";
-        return jdbcTemplate.query(sql, (resultSet, rowNum) -> {
-            Customer customer = new Customer();
-            customer.setCustomer_id(resultSet.getInt("customer_id"));
-            customer.setFirst_name(resultSet.getString("first_name"));
-            customer.setLast_name(resultSet.getString("last_name"));
-            customer.setSsn(resultSet.getInt("ssn"));
-            return customer;
-        });
+        return jdbcTemplate.query(sql, new CustomerMapper());
     }
 
     @Override
     @Transactional
     public Customer findById(int id) {
        final String sql = "SELECT customer_id, first_name, last_name, ssn FROM Customer WHERE customer_id = ?;";
-        Customer cu = jdbcTemplate.query(sql, (resultSet, rowNum) -> {
-            Customer customer = new Customer();
-            customer.setCustomer_id(resultSet.getInt("customer_id"));
-            customer.setFirst_name(resultSet.getString("first_name"));
-            customer.setLast_name(resultSet.getString("last_name"));
-            customer.setSsn(resultSet.getInt("ssn"));
-            return customer;
-        }, id).stream().findFirst().orElse(null);
+        Customer cu = jdbcTemplate.query(sql, new CustomerMapper(), id).stream().findFirst().orElse(null);
 
         if(cu != null) {
             addCards(cu);
