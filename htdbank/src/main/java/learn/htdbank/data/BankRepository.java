@@ -11,9 +11,9 @@ public interface BankRepository {
     @Transactional
     Bank findById(int bank_id);
     @Transactional
-    Bank add(Bank account);
+    Bank add(Bank bank);
     @Transactional
-    boolean update(Bank account);
+    boolean update(Bank bank);
     @Transactional
     boolean deleteById(int bank_id);
 }
