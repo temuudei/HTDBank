@@ -14,8 +14,9 @@ public class Account {
     @Min(value = 0, message = "Balance amount has to be at least 0.")
     private BigDecimal balance;
     private int bank_id;
+    private int customer_id;
+
     private List<Card> cards = new ArrayList<>();
-    private List<Customer> customers = new ArrayList<>();
 
     public int getAccount_id() {
         return account_id;
@@ -49,11 +50,11 @@ public class Account {
         this.cards = cards;
     }
 
-    public List<Customer> getCustomers() {
-        return customers;
+    public int getCustomer_id() {
+        return customer_id;
     }
 
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = customer_id;
     }
 }
