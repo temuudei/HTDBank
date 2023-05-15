@@ -61,7 +61,7 @@ create table Employee
 create table `Transaction`
 (
 	transaction_id int primary key auto_increment,
-    `action` varchar(10) not null,
+    transaction_type varchar(10) not null,
     amount decimal(10,2) not null
 );
 
