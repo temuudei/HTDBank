@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d5672c-afb2-4315-890e-a557c21e99db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdbank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/htdbank.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/htdbank_test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/htdbank_test.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/KnownGoodState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/htdbank/data/KnownGoodState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/learn/htdbank/data/AccountJdbcTemplateRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/learn/htdbank/data/AccountJdbcTemplateRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/data/AccountRepossitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/data/BankRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/htdbank/data/BankRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/data/CardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/htdbank/data/CardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/models/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/htdbank/models/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/learn/htdbank/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/learn/htdbank/models/Customer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +53,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/Users/temuudeishiilegdamba/Desktop/Code/HTDBank/htdbank/src/test/resources",
@@ -63,10 +73,52 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sql" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="learn.htdbank.data" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="learn.htdbank.data" />
       <recent name="learn.htdbank.models" />
     </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AccountJdbcTemplateRepositoryTest">
+    <configuration name="AccountJdbcTemplateRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.htdbank.data" />
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.data.AccountJdbcTemplateRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountJdbcTemplateRepositoryTest.shouldFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.htdbank.data" />
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.data.AccountJdbcTemplateRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldFindAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AccountJdbcTemplateRepositoryTest" />
+        <item itemvalue="JUnit.AccountJdbcTemplateRepositoryTest.shouldFindAll" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

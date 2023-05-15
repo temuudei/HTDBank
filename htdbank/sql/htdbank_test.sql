@@ -69,16 +69,16 @@ delimiter //
 create procedure set_known_good_state()
 begin
 
-	delete from Customer; 
-    alter table Customer auto_increment = 1;
-    delete from Bank;
-    alter table Bank auto_increment = 1;
     delete from `Account`;
     alter table `Account` auto_increment = 1;
     delete from Card;
     alter table Card auto_increment = 1;
     delete from Employee;
     alter table Employee auto_increment = 1;
+    delete from Customer;
+    alter table Customer auto_increment = 1;
+    delete from Bank;
+    alter table Bank auto_increment = 1;
     delete from `Transaction`;
     alter table `Transaction` auto_increment = 1;
 	
@@ -108,5 +108,3 @@ begin
 	
 end //
 delimiter ;
-
-
