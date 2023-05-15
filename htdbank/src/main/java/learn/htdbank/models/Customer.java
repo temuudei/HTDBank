@@ -17,7 +17,7 @@ public class Customer {
     @Min(value = 1, message = "Social security number has to be at least 1.")
     private int ssn;
     private List<Card> cards = new ArrayList<>();
-
+    private List<Account> accounts = new ArrayList<>();
     public int getCustomer_id() {
         return customer_id;
     }
@@ -56,5 +56,13 @@ public class Customer {
 
     public void setCards(List<Card> cards) {
         this.cards = cards;
+    }
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
     }
 }
