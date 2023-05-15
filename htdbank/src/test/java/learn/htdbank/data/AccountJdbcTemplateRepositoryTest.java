@@ -29,24 +29,45 @@ class AccountJdbcTemplateRepositoryTest {
 
     @Test
     void shouldFindById() {
-        Account accountOne = new Account();
-        accountOne.setAccount_id(1);
-        accountOne.setBalance(BigDecimal.valueOf(454.34));
-        accountOne.setBank_id(1);
-        accountOne.setCustomer_id(1);
+        Account account = new Account();
+        account.setAccount_id(1);
+        account.setBalance(BigDecimal.valueOf(547.34));
+        account.setBank_id(1);
+        account.setCustomer_id(1);
 
-        System.out.println(repository.findById(1));
+        Account actual = repository.findById(1);
+        assertEquals(account.getBalance(), actual.getBalance());
+        assertEquals(account.getAccount_id(), actual.getAccount_id());
     }
 
     @Test
-    void add() {
+    void shouldAdd() {
+        Account account = makeAccount();
+        Account actual = repository.add(account);
+        assertNotNull(actual);
+        assertEquals(3, actual.getAccount_id());
     }
 
     @Test
-    void update() {
+    void shouldUpdate() {
+        Account account = makeAccount();
+        account.setAccount_id(2);
+        assertTrue(repository.update(account));
+        account.setAccount_id(50);
+        assertFalse(repository.update(account));
     }
 
     @Test
-    void deleteById() {
+    void shouldDeleteById() {
+        assertTrue(repository.deleteById(1));
+        assertFalse(repository.deleteById(1));
+    }
+
+    private Account makeAccount() {
+        Account account = new Account();
+        account.setBalance(BigDecimal.valueOf(443.23));
+        account.setBank_id(1);
+        account.setCustomer_id(1);
+        return account;
     }
 }
