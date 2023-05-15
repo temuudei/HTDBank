@@ -74,7 +74,7 @@ begin
     alter table Employee auto_increment = 1;
     delete from Card;
     alter table Card auto_increment = 1;
-     delete from `Account`;
+    delete from `Account`;
     alter table `Account` auto_increment = 1;
     delete from Customer;
     alter table Customer auto_increment = 1;

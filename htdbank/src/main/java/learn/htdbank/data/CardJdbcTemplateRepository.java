@@ -5,12 +5,13 @@ import learn.htdbank.models.Card;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
-
+@Repository
 public class CardJdbcTemplateRepository implements CardRepository {
     private final JdbcTemplate jdbcTemplate;
 
@@ -21,14 +22,14 @@ public class CardJdbcTemplateRepository implements CardRepository {
     @Override
     @Transactional
     public List<Card> findAll() {
-        final String sql = "select card_id, `type`, account_id, customer_id from Card limit 1000;";
+        final String sql = "select card_id, `type` types, account_id, customer_id from Card limit 1000;";
         return jdbcTemplate.query(sql, new CardMapper());
     }
 
     @Override
     @Transactional
     public Card findById(int card_id) {
-        final String sql = "select card_id, `type`, account_id, customer_id from Card "
+        final String sql = "select card_id, `type` types, account_id, customer_id "
                 + "from Card where card_id = ?;";
         return jdbcTemplate.query(sql, new CardMapper(), card_id)
                 .stream()
