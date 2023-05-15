@@ -16,7 +16,7 @@ public class TransactionTemplateRepository implements TransactionRepository {
 
     @Override
     public List<Transaction> findAll() {
-        final String sql = "SELECT transaction_id, action, amount FROM Transaction;";
+        final String sql = "SELECT transaction_id, transaction_type, amount FROM Transaction;";
     }
 
     @Override
