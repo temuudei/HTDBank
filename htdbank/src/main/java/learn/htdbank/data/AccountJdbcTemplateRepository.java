@@ -87,7 +87,7 @@ public class AccountJdbcTemplateRepository implements AccountRepository {
 
     private void addCards(Account account) {
         final String sql = "select a.account_id, a.customer_id, a.bank_id, a.account_balance, "
-                + "c.card_id, c.`type` "
+                + "c.card_id, c.`type` types "
                 + "from Card c "
                 + "inner join `Account` a on c.account_id = a.account_id "
                 + "where c.account_id = ?;";
