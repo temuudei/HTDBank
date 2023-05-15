@@ -52,16 +52,15 @@ public class EmployeeTemplateRepository implements EmployeeRepository {
     @Override
     public Employee add(Employee employee) {
         KeyHolder key = new GeneratedKeyHolder();
-        final String sql = "INSERT INTO Employee (employee_id, first_name, last_name, salary, bank_id " +
-                "VALUES (?, ?, ?, ?, ?);";
+        final String sql = "INSERT INTO Employee (first_name, last_name, salary, bank_id " +
+                "VALUES (?, ?, ?, ?);";
 
         int rowsInserted = jdbcTemplate.update((connect) -> {
             PreparedStatement ps = connect.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, employee.getEmployee_id());
-            ps.setString(2, employee.getFirst_name());
-            ps.setString(3, employee.getLast_name());
-            ps.setBigDecimal(4, employee.getSalary());
-            ps.setInt(5, employee.getBank_id());
+            ps.setString(1, employee.getFirst_name());
+            ps.setString(2, employee.getLast_name());
+            ps.setBigDecimal(3, employee.getSalary());
+            ps.setInt(4, employee.getBank_id());
             return ps;
         }, key);
 
@@ -76,8 +75,8 @@ public class EmployeeTemplateRepository implements EmployeeRepository {
     @Override
     @Transactional
     public boolean update(Employee employee) {
-        final String sql = "UPDATE Employee SET employee_id=?, first_name=?, last_name=?, salary=?, bank_id=? WHERE employee_id = ?;";
-        int rowsUpdated = jdbcTemplate.update(sql, employee.getEmployee_id(), employee.getFirst_name(), employee.getLast_name(), employee.getSalary(), employee.getBank_id());
+        final String sql = "UPDATE Employee SET first_name=?, last_name=?, salary=?, bank_id=? WHERE employee_id = ?;";
+        int rowsUpdated = jdbcTemplate.update(sql, employee.getFirst_name(), employee.getLast_name(), employee.getSalary(), employee.getBank_id(), employee.getEmployee_id());
         return rowsUpdated > 0;
     }
 

@@ -50,14 +50,13 @@ public class CustomerTemplateRepository implements CustomerRepository {
     @Override
     public Customer add(Customer customer) {
         KeyHolder key = new GeneratedKeyHolder();
-        final String sql = "INSERT INTO Customer (customer_id, first_name, last_name, ssn) " +
-                "VALUES (?, ?, ?, ?);";
+        final String sql = "INSERT INTO Customer (first_name, last_name, ssn) " +
+                "VALUES (?, ?, ?);";
         int rowsInserted = jdbcTemplate.update((connect) -> {
             PreparedStatement ps = connect.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, customer.getCustomer_id());
-            ps.setString(2, customer.getFirst_name());
-            ps.setString(3, customer.getLast_name());
-            ps.setInt(4, customer.getSsn());
+            ps.setString(1, customer.getFirst_name());
+            ps.setString(2, customer.getLast_name());
+            ps.setInt(3, customer.getSsn());
             return ps;
         }, key );
 
