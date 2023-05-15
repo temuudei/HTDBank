@@ -30,7 +30,7 @@ public class TransactionTemplateRepository implements TransactionRepository {
     @Override
     @Transactional
     public Transaction findById(int id) {
-        final String sql = "SELECT transaction_id, transaction_type, amount FROM Transaction WHERE transactin_id = ?;";
+        final String sql = "SELECT transaction_id, transaction_type, amount FROM Transaction WHERE transaction_id = ?;";
         return jdbcTemplate.query(sql, new TransactionMapper(), id).stream().findFirst().orElse(null);
     }
 

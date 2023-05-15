@@ -69,6 +69,7 @@ delimiter //
 create procedure set_known_good_state()
 begin
 
+
     delete from Employee;
     alter table Employee auto_increment = 1;
     delete from Card;

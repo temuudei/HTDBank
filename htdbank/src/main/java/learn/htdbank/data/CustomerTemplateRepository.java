@@ -88,7 +88,7 @@ public class CustomerTemplateRepository implements CustomerRepository {
 
     //a customer has one or more cards
     private void addCards(Customer customer) {
-        final String sql = "SELECT ca.card_id, ca.type, ca.account_id, ca.customer_id, cu.first_name, cu.last_name FROM Card ca " +
+        final String sql = "SELECT ca.card_id, ca.`type` types, ca.account_id, ca.customer_id, cu.first_name, cu.last_name FROM Card ca " +
                 "INNER JOIN Customer cu ON ca.customer_id = cu.customer_id WHERE cu.customer_id = ?;";
 
         var cards = jdbcTemplate.query(sql, new CardMapper(), customer.getCustomer_id());
