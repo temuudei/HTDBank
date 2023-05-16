@@ -6,15 +6,10 @@ import java.util.List;
     public class Result<T> {
 
         private final ArrayList<String> messages = new ArrayList<>();
-        private ResultType type = ResultType.SUCCESS;
         private T payload;
 
-        public ResultType getType() {
-            return type;
-        }
-
         public boolean isSuccess() {
-            return type == ResultType.SUCCESS;
+            return messages.size() == 0;
         }
 
         public T getPayload() {
@@ -29,9 +24,8 @@ import java.util.List;
             return new ArrayList<>(messages);
         }
 
-        public void addErrorMessage(String message, ResultType type) {
+        public void addErrorMessage(String message) {
             messages.add(message);
-            this.type = type;
         }
 
     }
