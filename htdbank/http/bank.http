@@ -1,0 +1,28 @@
+@url = http://localhost:8080/api/bank
+
+GET {{url}} HTTP/1.1
+
+###
+
+GET {{url}}/1 HTTP/1.1
+
+###
+PUT {{url}}/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "bank_id": 1,
+    "routing_number": 1212
+}
+
+###
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "routing_number": 34343
+}
+
+###
+DELETE {{url}}/4 HTTP/1.1

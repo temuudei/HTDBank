@@ -1,0 +1,30 @@
+@url = http://localhost:8080/api/card
+
+GET {{url}} HTTP/1.1
+
+###
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "type": "Debit",
+    "account_id": 7,
+    "customer_id": 1
+}
+
+###
+
+PUT {{url}}/10 HTTP/1.1
+Content-Type: application/json
+
+{
+    "card_id": 10,
+    "type": "Credit",
+    "account_id": 7,
+    "customer_id": 1
+}
+
+###
+
+DELETE {{url}}/10 HTTP/1.1
