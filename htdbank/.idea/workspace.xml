@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d5672c-afb2-4315-890e-a557c21e99db" name="Changes" comment="Conflicts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/learn/htdbank/controllers/CardControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/learn/htdbank/controllers/CardControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,65 @@
       <recent name="learn.htdbank.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardControllerTest.deleteById">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.App" />
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.AccountControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.BankControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="htdbank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learn.htdbank.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.CardControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CardControllerTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="htdbank" />
       <extension name="coverage">
@@ -94,77 +153,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardControllerTest.shouldAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="htdbank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="learn.htdbank.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
-      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.CardControllerTest" />
-      <option name="METHOD_NAME" value="shouldAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardControllerTest.shouldFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="htdbank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="learn.htdbank.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
-      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.CardControllerTest" />
-      <option name="METHOD_NAME" value="shouldFindAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardControllerTest.shouldFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="htdbank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="learn.htdbank.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
-      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.CardControllerTest" />
-      <option name="METHOD_NAME" value="shouldFindById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardControllerTest.shouldUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="htdbank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="learn.htdbank.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="learn.htdbank.controllers" />
-      <option name="MAIN_CLASS_NAME" value="learn.htdbank.controllers.CardControllerTest" />
-      <option name="METHOD_NAME" value="shouldUpdate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.CardControllerTest" />
+        <item itemvalue="JUnit.BankControllerTest" />
+        <item itemvalue="JUnit.AccountControllerTest" />
         <item itemvalue="JUnit.CardControllerTest.deleteById" />
-        <item itemvalue="JUnit.CardControllerTest.shouldUpdate" />
-        <item itemvalue="JUnit.CardControllerTest.shouldFindById" />
-        <item itemvalue="JUnit.CardControllerTest.shouldAdd" />
-        <item itemvalue="JUnit.CardControllerTest.shouldFindAll" />
       </list>
     </recent_temporary>
   </component>
