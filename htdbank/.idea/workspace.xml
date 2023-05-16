@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d5672c-afb2-4315-890e-a557c21e99db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/htdbank/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/htdbank/controllers/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/htdbank/controllers/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/htdbank/controllers/BankController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/learn/htdbank/controllers/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/learn/htdbank/controllers/CardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,19 +80,16 @@
       <recent name="learn.htdbank.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardServiceTest.shouldFailValidationWhenIdIsNotFoundForUpdate">
-    <configuration name="CardServiceTest.deleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="learn.htdbank.App" />
       <module name="htdbank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="learn.htdbank.domain.*" />
+          <option name="PATTERN" value="learn.htdbank.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="learn.htdbank.domain" />
-      <option name="MAIN_CLASS_NAME" value="learn.htdbank.domain.CardServiceTest" />
-      <option name="METHOD_NAME" value="deleteById" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.CardServiceTest.shouldFailValidationWhenIdIsNotFoundForUpdate" />
         <item itemvalue="JUnit.CardServiceTest.shouldFailValidationWhenIsIsNegativeForUpdate" />
         <item itemvalue="JUnit.CardServiceTest.shouldFailValidationWhenIdIsNotZero" />
         <item itemvalue="JUnit.CardServiceTest.shouldFailValidationWhenCardIsNull" />
-        <item itemvalue="JUnit.CardServiceTest.deleteById" />
       </list>
     </recent_temporary>
   </component>
