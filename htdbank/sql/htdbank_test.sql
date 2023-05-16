@@ -104,7 +104,7 @@ begin
         (2, 'Lebron', 'James', 322.56, 2);
 	
     insert into `Transaction`(transaction_type, amount) values
-		('Deposit', '23231.56'),
+		('Deposit', 23231.56),
         ('Withdraw', 65.46);
 	
 end //
