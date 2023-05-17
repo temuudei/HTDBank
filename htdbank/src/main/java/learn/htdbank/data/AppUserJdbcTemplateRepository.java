@@ -85,6 +85,7 @@ public class AppUserJdbcTemplateRepository implements AppUserRepository {
             return;
         }
 
+
         for (String role : AppUser.convertAuthoritiesToRoles(authorities)) {
             String sql = "insert into app_user_role (app_user_id, app_role_id) "
                     + "select ?, app_role_id from app_role where `name` = ?;";

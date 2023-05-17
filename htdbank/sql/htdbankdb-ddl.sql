@@ -90,3 +90,7 @@ create table app_user_role (
         references app_role(app_role_id)
 );
 
+insert into app_role (`name`) values
+    ('USER'),
+    ('ADMIN');
+
