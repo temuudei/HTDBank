@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d5672c-afb2-4315-890e-a557c21e99db" name="Changes" comment="Conflicts">
-      <change beforePath="$PROJECT_DIR$/../htdbank-front-end" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/accounts/AddAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/accounts/AddAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/accounts/LandingAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/accounts/LandingAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/bank/LandingBank.js" beforeDir="false" afterPath="$PROJECT_DIR$/htdbank-front-end/htdbank-front-end/src/bank/LandingBank.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
