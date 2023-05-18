@@ -19,10 +19,12 @@ Content-Type: application/json
 
 POST {{url}} HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodGRiYW5rIiwic3ViIjoiam9obkBzbWl0aC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJleHAiOjE2ODQ0MjkzNjh9.jZxv6Qy8kiEP6WX77tdFxhGrbpvLaH_1tUNZXpjJ2ng
 
 {
-    "routing_number": 34343
+    "routing_number": 3434312
 }
 
 ###
-DELETE {{url}}/4 HTTP/1.1
+DELETE {{url}}/2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodGRiYW5rIiwic3ViIjoiam9obkBzbWl0aC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJleHAiOjE2ODQ0Mjc2OTV9.Wc0kmUs_OKwvxOGHEVCRmbtMnDyzE4lRs9DHbSdntow"
